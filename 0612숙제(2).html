@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form 심화 실습과제(2)</title>
+</head>
+<body>
+    <h1>백엔드 개발자 지원서</h1>
+    <p>Java, Spring, DataBase에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+    <hr>
+        <table>
+        <tr>
+            <th>개인정보</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td>이름</td>
+            <td><input type="text" id="user_name" name="user_name" placeholder="공백없이 입력하세요."></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>연락처</td>
+            <td><input type="text" id="user_phone" name="user_phone"></td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>지원분야</th>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" id="backend" name="apply" value="1"></td>
+            <td>백엔드 개발</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" id="server" name="apply" value="2"></td>
+            <td>서버 개발</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="radio" id="improvement" name="apply" value="3"></td>
+            <td>개발 환경 개선</td>
+        </tr>
+        <tr></tr>
+        <tr>
+            <th>지원동기</th>
+        </tr>
+        </table>
+        <textarea name="reason" id="reason" cols="50" rows="5" placeholder="지원 동기를 간략히 써주세요."></textarea><br>
+        <input type="submit" value="접수하기"> <input type="reset" value="다시쓰기">
+</body>
+</html>

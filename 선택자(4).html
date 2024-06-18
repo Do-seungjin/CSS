@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손, 자손 선택자</title>
+</head>
+<body>
+    <style>
+        .container>h1{background-color: aquamarine;}
+        .container h1{color: orange;}
+        /* class가 container인 태그의 자손 중에서 
+        div의 자손 중에서 ul의 자손 중에서 li의 자손 중에 a */
+        .container>div>ul>li>a{color: brown;}
+        /* class가 container인 태그의 후손 중에
+        a태그의 href속성이 CSS기초.html인 요소 */
+        .container a[href="CSS기초.html"]{background-color: cornflowerblue;}
+    </style>
+    <div class="container">
+        <h1>첫째</h1>
+        <p class="content">둘째</p>
+        <div>
+            <h1>셋째의 첫째 자식</h1>
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>
+                    <a href="CSS기초.html">CSS기초로 이동</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+<!-- id가 parent인 div의 자식 중에 h1 태그의 배경을 빨간색으로 변경
+ol 태그의 후손 중에서 class가 sprout인 span 태그의 배경색을 노란색으로 변경 -->
+    <style>
+        #parent h1{background-color: red;}
+        #parent .child ol .sprout{background-color: yellow;}
+    </style>
+    <div id="parent">
+        <div class="child">
+        <h1>콩나물 무침</h1>
+        <img src="/resources/kong.jpg" width="300" height="300">
+        <ol>
+            <li><span class="sprout">콩나물</span>을 씻습니다</li>
+            <li><span class="sprout">콩나물</span>을 볶아요</li>
+            <li>고춧가루,간장,설탕을 살포시 뿌려주시고요</li>
+            <li>파,마늘까지 얹어주세요.</li>
+            <li>타지않도록 물5스푼 넣어주세요.</li>
+            <li>들기름을 살짝 넣고 뚜껑덮고 센불에 3분~</li>
+            <li><span class="sprout">콩나물</span>무침 완성!</li>
+        </ol>
+        </div>
+    </div>    
+</body>
+</html>
